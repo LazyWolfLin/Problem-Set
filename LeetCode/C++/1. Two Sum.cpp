@@ -1,9 +1,5 @@
-///LeetCode 1. Two Sum C++
+///LeetCode 1. Two Sum by C++
 ///write by LazyWolfLin in 16.08.29
-
-#include <bits/stdc++.h>
-
-using namespace std;
 
 class Solution
 {

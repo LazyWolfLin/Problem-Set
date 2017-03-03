@@ -1,9 +1,5 @@
-///LeetCode 4. Median of Two Sorted Arrays C++
+///LeetCode 4. Median of Two Sorted Arrays by C++
 ///write by LazyWolfLin in 16.09.13
-
-#include <bits/stdc++.h>
-
-using namespace std;
 
 class Solution
 {

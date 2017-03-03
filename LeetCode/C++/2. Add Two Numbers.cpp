@@ -1,9 +1,5 @@
-///LeetCode 2. Add Two Numbers C++
+///LeetCode 2. Add Two Numbers by C++
 ///write by LazyWolfLin in 16.09.09
-
-#include <bits/stdc++.h>
-
-using namespace std;
 
 //Definition for singly-linked list.
 struct ListNode

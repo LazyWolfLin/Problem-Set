@@ -1,9 +1,5 @@
-///LeetCode 3. Longest Substring Without Repeating Characters C++
+///LeetCode 3. Longest Substring Without Repeating Characters by C++
 ///write by LazyWolfLin in 16.09.10
-
-#include <bits/stdc++.h>
-
-using namespace std;
 
 /*
 class Solution
