@@ -18,12 +18,12 @@ public:
                 if (letter[s[r]]) break;
                 letter[s[r]]=true;
                 if (r-l+1>ans) ans=r-l+1;
-                r++;
+                ++r;
             }
             while (l!=r)
             {
                 letter[s[l]]=false;
-                l++;
+                ++l;
                 if (s[l-1]==s[r]) break;
             }
         }
@@ -46,7 +46,7 @@ public:
             l=max(l,letter[s[r]]);
             ans=max(ans,r-l+1);
             letter[s[r]]=r+1;
-            r++;
+            ++r;
         }
         return ans;
     }
