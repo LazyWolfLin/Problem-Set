@@ -38,9 +38,11 @@ public:
     int letter[128];
     int lengthOfLongestSubstring(string s)
     {
+        //initialize
         int l=0,r=0;
         int ans=0;
         memset(letter,0,sizeof(letter));
+        //calculation
         while (r<s.size())
         {
             l=max(l,letter[s[r]]);
@@ -48,6 +50,7 @@ public:
             letter[s[r]]=r+1;
             ++r;
         }
+
         return ans;
     }
 };

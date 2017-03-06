@@ -1,9 +1,12 @@
 ///LeetCode 5. Longest Palindromic Substring by C++
 ///write by LazyWolfLin in 17.03.02
+///Manacher Algorithms
 
 class Solution {
 public:
-    string longestPalindrome(string s) {
+    string longestPalindrome(string s)
+    {
+        //initialize
         string t="$#";
         for (int i=0;i<s.size();++i)
         {
@@ -12,6 +15,7 @@ public:
         }
         vector<int> f(t.size(),0);
         int x=0,r=0,ansLen=0,ansCenter=0;
+        //calculation
         for (int i=1;i<t.size();++i)
         {
             f[i]=r>i?min(f[2*x-i],r-i):1;
@@ -27,6 +31,7 @@ public:
                 ansCenter=i;
             }
         }
+
         return s.substr((ansCenter-ansLen)/2,ansLen-1);
     }
 };

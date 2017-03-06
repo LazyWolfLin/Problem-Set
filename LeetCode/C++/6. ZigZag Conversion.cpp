@@ -3,10 +3,13 @@
 
 class Solution {
 public:
-    string convert(string s, int numRows) {
+    string convert(string s, int numRows)
+    {
         if (numRows==1) return s;
+        //initialize
         string ans;
         int key=2*numRows-2;
+        //calculation
         for (int x=0;x<s.size();x+=key) ans+=s[x];
         for (int i=1;i<numRows-1;++i)
         {
@@ -17,6 +20,7 @@ public:
             }
         }
         for (int x=numRows-1;x<s.size();x+=key) ans+=s[x];
+
         return ans;
     }
 };
