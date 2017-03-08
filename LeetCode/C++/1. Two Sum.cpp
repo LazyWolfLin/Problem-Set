@@ -6,10 +6,8 @@ class Solution
 public:
     vector<int> twoSum(vector<int>& nums, int target)
     {
-        //initialize
         vector<int> ans(2);//as return.
         map<int,int> indices;
-        //calculation
         for (int i=0;i<nums.size();++i)
         {
             if (indices.count(target-nums[i])!=0)
@@ -20,7 +18,6 @@ public:
             }
             indices.insert(make_pair(nums[i],i));
         }
-
         return ans;
     }
 };

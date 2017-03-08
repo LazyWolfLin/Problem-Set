@@ -9,10 +9,8 @@ public:
     double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
     {
         int cnt=nums1.size()+nums2.size();
-
         if (cnt%2==1) ans=findTheKthNumber(nums1,0,nums2,0,cnt/2+1);
         else ans=(findTheKthNumber(nums1,0,nums2,0,cnt/2)+findTheKthNumber(nums1,0,nums2,0,cnt/2+1))/2.0f;
-
         return ans;
     }
     double findTheKthNumber(vector<int> &Array1,int Begin1,vector<int> &Array2,int Begin2,int K)

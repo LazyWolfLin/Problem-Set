@@ -31,7 +31,6 @@ public:
                 ansCenter=i;
             }
         }
-
         return s.substr((ansCenter-ansLen)/2,ansLen-1);
     }
 };

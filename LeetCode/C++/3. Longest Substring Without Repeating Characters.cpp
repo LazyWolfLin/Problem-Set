@@ -50,7 +50,6 @@ public:
             letter[s[r]]=r+1;
             ++r;
         }
-
         return ans;
     }
 };
