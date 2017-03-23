@@ -1,7 +1,8 @@
 ///LeetCode 6. ZigZag Conversion by C++
 ///write by LazyWolfLin in 17.03.05
 
-class Solution {
+class Solution
+{
 public:
     string convert(string s, int numRows)
     {

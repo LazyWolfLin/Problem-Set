@@ -1,7 +1,8 @@
 ///LeetCode 8. String to Integer (atoi) by C++
 ///write by LazyWolfLin in 17.03.08
 
-class Solution {
+class Solution
+{
 public:
     int myAtoi(string str)
     {

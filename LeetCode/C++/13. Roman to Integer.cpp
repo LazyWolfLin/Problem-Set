@@ -1,7 +1,8 @@
 ///LeetCode 13. Roman to Integer by C++
 ///write by LazyWolfLin in 17.03.22
 
-class Solution {
+class Solution
+{
 public:
     int romanToInt(string s)
     {

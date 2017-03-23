@@ -2,7 +2,8 @@
 ///write by LazyWolfLin in 17.03.02
 ///Manacher Algorithms
 
-class Solution {
+class Solution
+{
 public:
     string longestPalindrome(string s)
     {

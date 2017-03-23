@@ -1,7 +1,8 @@
 ///LeetCode 10. Regular Expression Matching by C++
 ///write by LazyWolfLin in 17.03.10
 
-class Solution {
+class Solution
+{
 public:
     bool isMatch(string s, string p)
     {

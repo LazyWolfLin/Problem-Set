@@ -1,7 +1,8 @@
 ///LeetCode 7. Reverse Integer by C++
 ///write by LazyWolfLin in 17.03.06
 
-class Solution {
+class Solution
+{
 public:
     int reverse(int x)
     {

@@ -1,7 +1,8 @@
 ///LeetCode 11. Container With Most Water by C++
 ///write by LazyWolfLin in 17.03.11
 
-class Solution {
+class Solution
+{
 public:
     int maxArea(vector<int>& height)
     {

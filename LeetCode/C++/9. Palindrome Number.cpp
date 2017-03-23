@@ -1,7 +1,8 @@
 ///LeetCode 9. Palindrome Number by C++
 ///write by LazyWolfLin in 17.03.09
 
-class Solution {
+class Solution
+{
 public:
     bool isPalindrome(int x)
     {
