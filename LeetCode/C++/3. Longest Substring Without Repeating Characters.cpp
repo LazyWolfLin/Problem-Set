@@ -34,8 +34,8 @@ public:
 
 class Solution
 {
-public:
     int letter[128];
+public:
     int lengthOfLongestSubstring(string s)
     {
         //initialize

@@ -3,16 +3,6 @@
 
 class Solution
 {
-private:
-    double ans;
-public:
-    double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
-    {
-        int cnt=nums1.size()+nums2.size();
-        if (cnt%2==1) ans=findTheKthNumber(nums1,0,nums2,0,cnt/2+1);
-        else ans=(findTheKthNumber(nums1,0,nums2,0,cnt/2)+findTheKthNumber(nums1,0,nums2,0,cnt/2+1))/2.0f;
-        return ans;
-    }
     double findTheKthNumber(vector<int> &Array1,int Begin1,vector<int> &Array2,int Begin2,int K)
     {
         //if Array1 large then Array2, swap them.
@@ -25,5 +15,14 @@ public:
         int cnt=min(K/2,int(Array1.size())-Begin1);
         if (Array1[Begin1+cnt-1]<Array2[Begin2+K-cnt-1]) return findTheKthNumber(Array1,Begin1+cnt,Array2,Begin2,K-cnt);
         else return findTheKthNumber(Array1,Begin1,Array2,Begin2+K-cnt,cnt);
+    }
+public:
+    double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
+    {
+        double ans;
+        int cnt=nums1.size()+nums2.size();
+        if (cnt%2==1) ans=findTheKthNumber(nums1,0,nums2,0,cnt/2+1);
+        else ans=(findTheKthNumber(nums1,0,nums2,0,cnt/2)+findTheKthNumber(nums1,0,nums2,0,cnt/2+1))/2.0f;
+        return ans;
     }
 };
