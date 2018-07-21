@@ -1,23 +1,19 @@
-///LeetCode 1. Two Sum by C++
-///write by LazyWolfLin in 16.08.29
+/// LeetCode 1. Two Sum by C++
+/// write by LazyWolfLin in 16.08.29
 
 class Solution
 {
 public:
     vector<int> twoSum(vector<int>& nums, int target)
     {
-        vector<int> ans(2);//as return.
-        map<int,int> indices;
-        for (int i=0;i<nums.size();++i)
+        unordered_map<int, int> indices;
+        for (size_t i = 0; i < nums.size(); ++i)
         {
-            if (indices.count(target-nums[i])!=0)
-            {
-                ans[0]=indices[target-nums[i]];
-                ans[1]=i;
-                break;
-            }
-            indices.insert(make_pair(nums[i],i));
+            auto iter = indices.find(target-nums[i]);
+            if (iter != indices.end())
+                return {iter->second, i};
+            indices[nums[i]] = i;
         }
-        return ans;
+        return {};
     }
 };
