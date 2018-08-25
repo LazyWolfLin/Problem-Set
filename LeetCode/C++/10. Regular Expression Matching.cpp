@@ -6,18 +6,22 @@ class Solution
 public:
     bool isMatch(string s, string p)
     {
-        if (p.size()==0) return s.size()==0;
-
-        if (p[1]!='*')
+        bool** dp = new bool* [s.size() + 1];
+        for (size_t i = 0; i < s.size() + 1; ++i)
         {
-            return (p[0]==s[0]||(p[0]=='.'&&s[0]!='\0'))&&isMatch(s.substr(1),p.substr(1));
+            dp[i] = new bool[p.size() + 1];
+            memset(dp[i], false, (p.size() + 1) * sizeof(bool));
         }
-        int x=0;
-        while (p[0]==s[x]||(p[0]=='.'&&s[x]!='\0'))
-        {
-            if (isMatch(s.substr(x),p.substr(2))) return true;
-            ++x;
-        }
-        return isMatch(s.substr(x),p.substr(2));
+        dp[s.size()][p.size()] = true;
+        for (int i = s.size(); i >= 0; --i)
+            for (int j = p.size() - 1; j >= 0; --j)
+            {
+                dp[i][j] = i < s.size() && (p[j] == s[i] || p[j] == '.');
+                if (j + 1 < p.size() && p[j + 1] == '*')
+                    dp[i][j] = dp[i][j + 2] || (dp[i][j] && dp[i + 1][j]);
+                else
+                    dp[i][j] = dp[i][j] && dp[i + 1][j + 1];
+            }
+        return dp[0][0];
     }
 };
