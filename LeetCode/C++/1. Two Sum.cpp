@@ -4,12 +4,12 @@
 class Solution
 {
 public:
-    vector<int> twoSum(vector<int>& nums, int target)
+    vector<int> twoSum(vector<int> &nums, int target)
     {
         unordered_map<int, int> indices;
         for (size_t i = 0; i < nums.size(); ++i)
         {
-            auto iter = indices.find(target-nums[i]);
+            auto iter = indices.find(target - nums[i]);
             if (iter != indices.end())
                 return {iter->second, i};
             indices[nums[i]] = i;

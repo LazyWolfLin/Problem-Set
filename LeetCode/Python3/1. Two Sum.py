@@ -14,4 +14,4 @@ class Solution:
                 return [indices[target - nums[i]], i]
             else:
                 indices[nums[i]] = i;
-        return [];
+        return []
